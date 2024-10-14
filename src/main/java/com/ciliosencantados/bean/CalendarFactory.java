@@ -43,7 +43,7 @@ public class CalendarFactory {
     }
 
     private static Credential getCredentials() throws IOException {
-        StoredCredential storedCredential = StoredCredentialHelper.load();
+        final StoredCredential storedCredential = StoredCredentialHelper.load();
         if (storedCredential == null || storedCredential.getAccessToken() == null || storedCredential.getAccessToken().isBlank()) {
             Credential credential = newAuthorization();
 

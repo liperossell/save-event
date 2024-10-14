@@ -6,8 +6,6 @@ import com.google.api.client.auth.oauth2.StoredCredential;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public final class StoredCredentialHelper {
 
@@ -15,7 +13,7 @@ public final class StoredCredentialHelper {
 
     private StoredCredentialHelper() { }
 
-    public static void write(StoredCredential storedCredential) {
+    public static void write(final StoredCredential storedCredential) {
         try {
             File file = new File(STORED_CREDENTIALS_FILE_PATH);
             ObjectMapper mapper = new ObjectMapper();
